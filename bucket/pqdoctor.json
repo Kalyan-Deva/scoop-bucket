@@ -1,0 +1,27 @@
+{
+    "version": "0.2.1",
+    "description": "Why isn't this server post-quantum? Handshake-only TLS probes, the cause and the fix",
+    "homepage": "https://pqdoctor.com",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://pqdoctor.com/downloads/v0.2.1/pqdoctor-0.2.1-windows-x64.exe#/pqdoctor.exe",
+            "hash": "c1220199323deaef624abc0e30665783fab2433ad7b04e164af02ac6d115b00a"
+        }
+    },
+    "bin": "pqdoctor.exe",
+    "checkver": {
+        "url": "https://crates.io/api/v1/crates/pqdoctor",
+        "jsonpath": "$.crate.max_version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://pqdoctor.com/downloads/v$version/pqdoctor-$version-windows-x64.exe#/pqdoctor.exe"
+            }
+        },
+        "hash": {
+            "url": "https://pqdoctor.com/downloads/v$version/SHA256SUMS.txt"
+        }
+    }
+}
