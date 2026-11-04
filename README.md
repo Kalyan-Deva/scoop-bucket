@@ -1,11 +1,10 @@
-# Kalyan-Deva/scoop-bucket
+# Kalyan-Deva/scoop-bucket (retired)
 
-A [Scoop](https://scoop.sh) bucket for [pqdoctor](https://pqdoctor.com): why isn't this server post-quantum?
+pqdoctor is no longer distributed through Scoop. Install it from npm or crates.io instead:
 
 ```powershell
-scoop bucket add kalyan-deva https://github.com/Kalyan-Deva/scoop-bucket
-scoop install pqdoctor
-pqdoctor --version
+npm install -g pqdoctor      # prebuilt Windows x64 binary
+cargo install pqdoctor       # from source, with Rust 1.85+
 ```
 
-The manifest installs the Windows release binary from [pqdoctor.com/downloads](https://pqdoctor.com/get-started/downloads/), checked against its SHA-256. MIT licensed.
+If you installed it from this bucket: `scoop uninstall pqdoctor; scoop bucket rm kalyan-deva`, then use one of the commands above. Docs: [pqdoctor.com](https://pqdoctor.com).
